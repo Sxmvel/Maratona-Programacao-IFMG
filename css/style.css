@@ -95,3 +95,69 @@ footer {
     padding: 15px 0;
     font-size: 0.9em;
 }
+
+/* Seções Comuns */
+.section {
+    padding: 60px 0;
+}
+
+.bg-light {
+    background-color: var(--color-background); /* Fundo claro para contraste */
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2em;
+    border-bottom: 3px solid var(--color-primary);
+    display: inline-block;
+    padding-bottom: 5px;
+    width: auto;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Estilo para Listas (Regras Rápidas) */
+.section ul {
+    list-style-type: none;
+    padding: 20px 0;
+}
+
+.section ul li {
+    background: #e0f2e0; /* Fundo verde clarinho para destaque */
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-left: 5px solid var(--color-primary);
+    border-radius: 4px;
+}
+
+.section ul li strong {
+    color: var(--color-primary);
+}
+
+/* Estilo para Tabela (Níveis e Horários) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-align: left;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+table thead tr {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tbody tr:hover {
+    background-color: #e6e6e6;
+}
