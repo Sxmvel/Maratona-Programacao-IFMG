@@ -51,33 +51,50 @@ h4 {
 /* 4. CABEÇALHO E NAVEGAÇÃO */
 
 .main-header {
+    background-image: none;
+    background-color: var(--color-primary); 
+    color: var(--color-text-light);
+    padding: 20px 0; 
+    text-align: center;
+    
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative; 
+}
+
+.main-header h1, .main-header h2 {
+    color: transparent; 
+}
+
+.main-header.home-bg {
     background-image: url('../assets/header-bg.png');
     background-size: cover;
     background-position: center center;
     background-color: var(--color-secondary);
-    color: var(--color-text-light);
-
-    min-height: 250px;
-    padding-bottom: 20px;
-    text-align: center;
-
-    display: flex;
-    flex-direction: column;
+    
+ 
+    min-height: 250px; 
+    
     justify-content: flex-end;
 }
 
 .main-header .container {
     width: 100%;
+    
 }
 
 nav {
     margin-top: 10px;
     padding-top: 15px;
-   
     border-top: none;
-    background-color: rgba(28, 28, 28, 0.5);
-    
+    background-color: rgba(28, 28, 28, 0.5); 
     padding: 15px 0;
+    
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 nav a {
@@ -89,26 +106,24 @@ nav a {
     transition: background-color 0.2s, color 0.2s;
     display: inline-block;
     font-weight: 600;
-
-
     border: 1px solid rgba(255, 255, 255, 0.4);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 nav a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    color: #ffd700;
+    background-color: rgba(255, 255, 255, 0.2); 
+    color: #ffd700; 
 }
 
 nav a.active {
-    background-color: var(--color-background);
-    color: var(--color-primary);
+    background-color: rgba(255, 255, 255, 0.9); 
+    color: var(--color-primary); 
     font-weight: 700;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .cta-nav {
-    background-color: #ffd700;
+    background-color: #ffd700; 
     color: var(--color-secondary);
     font-weight: 700 !important;
     margin-left: 20px;
