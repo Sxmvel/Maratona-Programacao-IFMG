@@ -49,52 +49,65 @@ h4 {
 }
 
 /* 4. CABEÇALHO E NAVEGAÇÃO */
-
 .main-header {
     background-image: none;
     background-color: var(--color-primary); 
     color: var(--color-text-light);
     padding: 20px 0; 
     text-align: center;
+    position: relative;
     
-
+    /* Configuração de Altura Padrão (para as páginas secundárias) */
+    min-height: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    position: relative; 
 }
 
 .main-header h1, .main-header h2 {
+    /* Esconde os títulos HTML nas páginas com a imagem de fundo */
     color: transparent; 
+    visibility: hidden; 
+    height: 0;
+    margin: 0;
+    padding: 0;
 }
+
 
 .main-header.home-bg {
     background-image: url('../assets/header-bg.png');
-    background-size: cover;
-    background-position: center center;
+    background-size: cover; 
+    background-position: center top; /* Foca o centro superior da imagem */
     background-color: var(--color-secondary);
     
- 
+    /* Altura MÍNIMA e FIXA para a imagem */
     min-height: 250px; 
     
+    /* Reposiciona o flexbox para empurrar o menu para o rodapé do cabeçalho */
     justify-content: flex-end;
 }
 
-.main-header .container {
+.main-header.home-bg .container {
+    /* Força o conteúdo (NAV) a ocupar a largura total no Index */
     width: 100%;
-    
 }
 
 nav {
-    margin-top: 10px;
-    padding-top: 15px;
+    margin-top: 0;
+    padding-top: 0;
     border-top: none;
-    background-color: rgba(28, 28, 28, 0.5); 
+    background-color: rgba(28, 28, 28, 0.5); /* Fundo semi-transparente para melhor contraste */
     padding: 15px 0;
+    width: 100%; 
     
-    position: absolute;
+    /* Na HOME, flutua no rodapé da imagem. Nas secundárias, fica fixo */
+    position: relative; 
+}
+
+.main-header.home-bg nav {
+    position: absolute; /* OBRIGA o menu a flutuar na parte de baixo da imagem */
     bottom: 0;
-    width: 100%;
+    background-color: rgba(28, 28, 28, 0.75); /* Fundo mais escuro para garantir o contraste */
 }
 
 nav a {
