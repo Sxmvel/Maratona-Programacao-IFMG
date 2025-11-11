@@ -6,9 +6,9 @@
 }
 
 :root {
-    --color-primary: #006400; 
-    --color-secondary: #1C1C1C; 
-    --color-background: #F0FFF0; 
+    --color-primary: #006400;
+    --color-secondary: #1C1C1C;
+    --color-background: #F0FFF0;
     --color-text-light: #FFFFFF;
 }
 
@@ -20,7 +20,10 @@ body {
     color: var(--color-secondary);
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-family: 'Montserrat', sans-serif;
     color: var(--color-primary);
     margin-bottom: 0.5em;
@@ -42,7 +45,7 @@ h1, h2, h3, h4 {
 }
 
 .bg-light {
-    background-color: var(--color-background); 
+    background-color: var(--color-background);
 }
 
 /* 4. CABEÇALHO E NAVEGAÇÃO */
@@ -52,45 +55,71 @@ h1, h2, h3, h4 {
     background-size: cover;
     background-position: center center;
     background-color: var(--color-secondary);
-    
     color: var(--color-text-light);
-    padding: 20px 0 40px 0; 
+
+    min-height: 250px;
+    padding-bottom: 20px;
     text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 .main-header .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 100%;
 }
 
-
 nav {
-    margin-top: 10px; 
+    margin-top: 10px;
     padding-top: 15px;
-    border-top: 1px solid rgba(255, 255, 255, 0.4); 
-    width: 100%;
+   
+    border-top: none;
+    background-color: rgba(28, 28, 28, 0.5);
+    
+    padding: 15px 0;
 }
 
 nav a {
     color: var(--color-text-light);
     text-decoration: none;
-    padding: 10px 18px;
+    padding: 8px 15px;
     margin: 0 5px;
-    border-radius: 6px;
-    transition: background-color 0.3s;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
     display: inline-block;
     font-weight: 600;
+
+
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 nav a:hover {
-    background-color: rgba(255, 255, 255, 0.2); 
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffd700;
 }
 
 nav a.active {
-    background-color: rgba(255, 255, 255, 0.9); 
-    color: var(--color-primary); 
+    background-color: var(--color-background);
+    color: var(--color-primary);
     font-weight: 700;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.cta-nav {
+    background-color: #ffd700;
+    color: var(--color-secondary);
+    font-weight: 700 !important;
+    margin-left: 20px;
+    padding: 10px 20px;
+    border: none !important;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.cta-nav:hover {
+    background-color: #ffc400;
+    color: var(--color-secondary);
 }
 
 
@@ -99,18 +128,18 @@ nav a.active {
     background-color: var(--color-secondary);
     color: var(--color-text-light);
     text-align: center;
-    padding: 40px 0; 
+    padding: 40px 0;
 }
 
 .hero h3 {
-    color: #ffd700; 
+    color: #ffd700;
     font-size: 2em;
     margin-bottom: 15px;
 }
 
 .hero p {
     font-size: 1.2em;
-    margin-bottom: 25px; 
+    margin-bottom: 25px;
 }
 
 /* 6. BOTÕES E LINKS */
@@ -126,7 +155,7 @@ nav a.active {
 }
 
 .btn-primary:hover {
-    background-color: #008000; 
+    background-color: #008000;
 }
 
 .btn-secondary {
@@ -148,13 +177,13 @@ nav a.active {
 }
 
 .btn-large {
-    padding: 15px 35px; 
+    padding: 15px 35px;
     font-size: 1.1em;
 }
 
 /* 7. ELEMENTOS DE CONTEÚDO (H2, LISTAS, TABELAS) */
 .section h2 {
-    display: table; 
+    display: table;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 40px;
@@ -169,7 +198,7 @@ nav a.active {
 }
 
 .section ul li {
-    background: #e0f2e0; 
+    background: #e0f2e0;
     margin-bottom: 10px;
     padding: 10px 15px;
     border-left: 5px solid var(--color-primary);
@@ -187,7 +216,8 @@ table {
     text-align: left;
 }
 
-table th, table td {
+table th,
+table td {
     padding: 12px 15px;
     border: 1px solid #ddd;
 }
@@ -229,10 +259,10 @@ table tbody tr:hover {
     border-radius: 8px;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    height: 100%; 
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; 
+    justify-content: space-between;
 }
 
 .link-item h3 {
@@ -242,12 +272,12 @@ table tbody tr:hover {
 }
 
 .link-item p {
-    flex-grow: 1; 
+    flex-grow: 1;
     margin-bottom: 20px;
 }
 
 .link-item.highlight {
-    background-color: #f2fff2; 
+    background-color: #f2fff2;
     border-color: #008000;
     border-width: 2px;
 }
@@ -315,7 +345,7 @@ table tbody tr:hover {
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 40px;
     margin-top: 20px;
-    align-items: stretch; 
+    align-items: stretch;
 }
 
 .card-premiacao {
@@ -342,8 +372,8 @@ table tbody tr:hover {
 }
 
 .medal-tier-list li {
-    background: #e0f2e0; 
-    border-left: 5px solid #ffd700; 
+    background: #e0f2e0;
+    border-left: 5px solid #ffd700;
     padding: 15px;
     margin-bottom: 10px;
     font-size: 1.2em;
@@ -425,21 +455,40 @@ footer {
     color: var(--color-secondary);
 }
 
-.horario-final, .endereco-completo {
+.horario-final,
+.endereco-completo {
     font-size: 0.9em;
     font-weight: 400;
     color: #666;
     margin-top: 5px;
 }
 
-.destaque-inscricao { border-bottom: 5px solid #008000; } /* Verde para Inscrição */
-.destaque-inscricao p { color: #008000; }
+.destaque-inscricao {
+    border-bottom: 5px solid #008000;
+}
 
-.destaque-evento { border-bottom: 5px solid #ffd700; } /* Amarelo/Dourado para Evento */
-.destaque-evento p { color: #ffd700; }
+/* Verde para Inscrição */
+.destaque-inscricao p {
+    color: #008000;
+}
 
-.destaque-local { border-bottom: 5px solid #1C1C1C; } /* Preto para Local */
-.destaque-local p { color: #1C1C1C; }
+.destaque-evento {
+    border-bottom: 5px solid #ffd700;
+}
+
+/* Amarelo/Dourado para Evento */
+.destaque-evento p {
+    color: #ffd700;
+}
+
+.destaque-local {
+    border-bottom: 5px solid #1C1C1C;
+}
+
+/* Preto para Local */
+.destaque-local p {
+    color: #1C1C1C;
+}
 
 /* 2. Níveis Grid */
 .niveis-grid {
