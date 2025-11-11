@@ -244,3 +244,29 @@ footer {
     padding: 15px 0;
     font-size: 0.9em;
 }
+
+nav {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3); 
+}
+
+nav a {
+    color: var(--color-text-light);
+    text-decoration: none;
+    padding: 8px 15px;
+    margin: 0 5px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    display: inline-block;
+    font-weight: 600;
+}
+
+nav a:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+nav a.active {
+    background-color: #008000; 
+    color: #FFF;
+}
