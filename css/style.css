@@ -46,42 +46,30 @@ h1, h2, h3, h4 {
 }
 
 /* 4. CABEÇALHO E NAVEGAÇÃO */
+
 .main-header {
-    /* Configuração de Fundo da Imagem */
-    background-image: url('../assets/header-bg.png'); /* Caminho Corrigido: Volta para a raiz e entra em assets */
-    background-size: cover; /* Cobre a área do cabeçalho */
-    background-position: center center; /* Centraliza a imagem no topo */
-    background-color: var(--color-secondary); /* Cor de fallback (preto) */
+    background-image: url('../assets/header-bg.png');
+    background-size: cover;
+    background-position: center center;
+    background-color: var(--color-secondary);
     
     color: var(--color-text-light);
-    padding: 60px 0; /* Aumenta o espaçamento superior e inferior para a imagem aparecer */
+    padding: 20px 0 40px 0; 
     text-align: center;
 }
 
 .main-header .container {
-    /* Força centralização dos elementos internos, se necessário */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.main-header h1 {
-    color: var(--color-text-light);
-    font-size: 2.5em;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8); /* Sombra mais forte para garantir visibilidade */
-}
-.main-header h2 {
-    color: var(--color-text-light);
-    font-weight: 400;
-    font-size: 1.2em;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
-}
 
 nav {
-    margin-top: 25px; 
+    margin-top: 10px; 
     padding-top: 15px;
     border-top: 1px solid rgba(255, 255, 255, 0.4); 
-    width: 100%; /* Ocupa a largura total para centralizar o menu */
+    width: 100%;
 }
 
 nav a {
@@ -111,18 +99,18 @@ nav a.active {
     background-color: var(--color-secondary);
     color: var(--color-text-light);
     text-align: center;
-    padding: 80px 0;
+    padding: 40px 0; 
 }
 
 .hero h3 {
     color: #ffd700; 
     font-size: 2em;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .hero p {
     font-size: 1.2em;
-    margin-bottom: 30px;
+    margin-bottom: 25px; 
 }
 
 /* 6. BOTÕES E LINKS */
