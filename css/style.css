@@ -6,10 +6,9 @@
 }
 
 :root {
-    /* Cores Institucionais */
-    --color-primary: #006400; /* Verde Escuro IFMG */
-    --color-secondary: #1C1C1C; /* Quase Preto */
-    --color-background: #F0FFF0; /* Branco Suave/Híbrido */
+    --color-primary: #006400; 
+    --color-secondary: #1C1C1C; 
+    --color-background: #F0FFF0; 
     --color-text-light: #FFFFFF;
 }
 
@@ -20,21 +19,18 @@ body {
     color: var(--color-secondary);
 }
 
-/* Tipografia */
 h1, h2, h3, h4 {
     font-family: 'Montserrat', sans-serif;
     color: var(--color-primary);
     margin-bottom: 0.5em;
 }
 
-/* Componentes de Layout */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
 }
 
-/* Header */
 .main-header {
     background-color: var(--color-primary);
     color: var(--color-text-light);
@@ -52,7 +48,6 @@ h1, h2, h3, h4 {
     font-size: 1.2em;
 }
 
-/* Hero Section (Destaque) */
 .hero {
     background-color: var(--color-secondary);
     color: var(--color-text-light);
@@ -61,7 +56,7 @@ h1, h2, h3, h4 {
 }
 
 .hero h3 {
-    color: #ffd700; /* Destaque amarelo para a data */
+    color: #ffd700; 
     font-size: 2em;
     margin-bottom: 20px;
 }
@@ -71,7 +66,6 @@ h1, h2, h3, h4 {
     margin-bottom: 30px;
 }
 
-/* Botão Principal */
 .btn-primary {
     display: inline-block;
     background-color: var(--color-primary);
@@ -84,48 +78,34 @@ h1, h2, h3, h4 {
 }
 
 .btn-primary:hover {
-    background-color: #008000; /* Um verde um pouco mais claro no hover */
+    background-color: #008000; 
 }
 
-/* Footer */
-footer {
-    background-color: var(--color-primary);
-    color: var(--color-text-light);
-    text-align: center;
-    padding: 15px 0;
-    font-size: 0.9em;
-}
-
-/* Seções Comuns */
 .section {
     padding: 60px 0;
 }
 
 .bg-light {
-    background-color: var(--color-background); /* Fundo claro para contraste */
+    background-color: var(--color-background); 
 }
 
 .section h2 {
-    text-align: center;
+    display: table; 
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 40px;
     font-size: 2em;
     border-bottom: 3px solid var(--color-primary);
-    display: inline-block;
     padding-bottom: 5px;
-    width: auto;
-    max-width: 90%;
-    margin-left: auto;
-    margin-right: auto;
 }
 
-/* Estilo para Listas (Regras Rápidas) */
 .section ul {
     list-style-type: none;
     padding: 20px 0;
 }
 
 .section ul li {
-    background: #e0f2e0; /* Fundo verde clarinho para destaque */
+    background: #e0f2e0; 
     margin-bottom: 10px;
     padding: 10px 15px;
     border-left: 5px solid var(--color-primary);
@@ -136,7 +116,6 @@ footer {
     color: var(--color-primary);
 }
 
-/* Estilo para Tabela (Níveis e Horários) */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -162,19 +141,6 @@ table tbody tr:hover {
     background-color: #e6e6e6;
 }
 
-
-
-.section h2 {
-    display: table; 
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 40px;
-    font-size: 2em;
-    border-bottom: 3px solid var(--color-primary);
-    padding-bottom: 5px;
-}
-
-/* Lista de medalhas de honra */
 .medal-list {
     list-style-type: none;
     padding: 10px 0;
@@ -193,12 +159,10 @@ table tbody tr:hover {
     font-size: 0.95em;
 }
 
-/* Alinhamento de texto central (usado na seção Links Úteis) */
 .text-center {
     text-align: center;
 }
 
-/* Informação pequena abaixo dos botões */
 .block-info {
     display: block;
     margin-top: 15px;
@@ -206,7 +170,6 @@ table tbody tr:hover {
     font-size: 0.85em;
 }
 
-/* Botão Secundário (para o Beecrowd, por exemplo) */
 .btn-secondary {
     display: inline-block;
     background-color: transparent;
@@ -223,4 +186,61 @@ table tbody tr:hover {
 .btn-secondary:hover {
     background-color: var(--color-primary);
     color: var(--color-text-light);
+}
+
+.organizadores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.organizador-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.organizador-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.organizador-card h3 {
+    color: var(--color-secondary);
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.organizador-card p {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.organizador-card a {
+    display: block;
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.organizador-card a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9em;
 }
