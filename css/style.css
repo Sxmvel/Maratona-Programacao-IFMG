@@ -161,3 +161,66 @@ table tbody tr:nth-child(even) {
 table tbody tr:hover {
     background-color: #e6e6e6;
 }
+
+
+
+.section h2 {
+    display: table; 
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    font-size: 2em;
+    border-bottom: 3px solid var(--color-primary);
+    padding-bottom: 5px;
+}
+
+/* Lista de medalhas de honra */
+.medal-list {
+    list-style-type: none;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.medal-list li {
+    background: var(--color-background);
+    color: var(--color-primary);
+    display: inline-block;
+    margin: 5px 10px;
+    padding: 8px 15px;
+    border: 2px solid var(--color-primary);
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.95em;
+}
+
+/* Alinhamento de texto central (usado na seção Links Úteis) */
+.text-center {
+    text-align: center;
+}
+
+/* Informação pequena abaixo dos botões */
+.block-info {
+    display: block;
+    margin-top: 15px;
+    color: #666;
+    font-size: 0.85em;
+}
+
+/* Botão Secundário (para o Beecrowd, por exemplo) */
+.btn-secondary {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+}
