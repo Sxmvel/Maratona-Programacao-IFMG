@@ -46,48 +46,61 @@ h1, h2, h3, h4 {
 }
 
 /* 4. CABEÇALHO E NAVEGAÇÃO */
+
+
 .main-header {
-    background-color: var(--color-primary);
+    
+    background-image: url('../assets/header-bg.png');
+    background-size: cover; /* Faz a imagem cobrir toda a área */
+    background-position: center center; /* Centraliza a imagem */
+    background-color: var(--color-secondary); /* Cor de fallback caso a imagem não carregue */
+    
     color: var(--color-text-light);
-    padding: 20px 0;
+    /* Aumenta o padding para a imagem ter mais destaque */
+    padding: 40px 0; 
     text-align: center;
 }
 
 .main-header h1 {
     color: var(--color-text-light);
     font-size: 2.5em;
+    /* Adiciona uma sombra suave para garantir que o texto branco apareça sobre áreas claras da imagem */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); 
 }
 .main-header h2 {
     color: var(--color-text-light);
     font-weight: 400;
     font-size: 1.2em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
 }
 
 nav {
-    margin-top: 15px;
-    padding-top: 10px;
-    border-top: 1px solid rgba(255, 255, 255, 0.3); 
+    margin-top: 25px; /* Mais espaço entre o título e o menu */
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.4); 
 }
 
 nav a {
     color: var(--color-text-light);
     text-decoration: none;
-    padding: 8px 15px;
+    padding: 10px 18px;
     margin: 0 5px;
-    border-radius: 4px;
+    border-radius: 6px;
     transition: background-color 0.3s;
     display: inline-block;
     font-weight: 600;
 }
 
 nav a:hover {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.2); /* Fundo branco semi-transparente no hover */
 }
 
 nav a.active {
-    background-color: #008000; 
-    color: #FFF;
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo quase branco no item ativo */
+    color: var(--color-primary); /* Texto verde no item ativo para maior contraste */
+    font-weight: 700;
 }
+
 
 /* 5. SEÇÃO HERO (DESTAQUE) */
 .hero {
