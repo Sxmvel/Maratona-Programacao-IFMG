@@ -1,4 +1,4 @@
-/* RESET BÁSICO */
+/* 1. RESET E VARIÁVEIS */
 * {
     margin: 0;
     padding: 0;
@@ -12,6 +12,7 @@
     --color-text-light: #FFFFFF;
 }
 
+/* 2. BASE E TIPOGRAFIA */
 body {
     font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
@@ -25,12 +26,26 @@ h1, h2, h3, h4 {
     margin-bottom: 0.5em;
 }
 
+.text-center {
+    text-align: center;
+}
+
+/* 3. LAYOUT GERAL */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
 }
 
+.section {
+    padding: 60px 0;
+}
+
+.bg-light {
+    background-color: var(--color-background); 
+}
+
+/* 4. CABEÇALHO E NAVEGAÇÃO */
 .main-header {
     background-color: var(--color-primary);
     color: var(--color-text-light);
@@ -48,6 +63,33 @@ h1, h2, h3, h4 {
     font-size: 1.2em;
 }
 
+nav {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3); 
+}
+
+nav a {
+    color: var(--color-text-light);
+    text-decoration: none;
+    padding: 8px 15px;
+    margin: 0 5px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    display: inline-block;
+    font-weight: 600;
+}
+
+nav a:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+nav a.active {
+    background-color: #008000; 
+    color: #FFF;
+}
+
+/* 5. SEÇÃO HERO (DESTAQUE) */
 .hero {
     background-color: var(--color-secondary);
     color: var(--color-text-light);
@@ -66,6 +108,7 @@ h1, h2, h3, h4 {
     margin-bottom: 30px;
 }
 
+/* 6. BOTÕES E LINKS */
 .btn-primary {
     display: inline-block;
     background-color: var(--color-primary);
@@ -81,14 +124,30 @@ h1, h2, h3, h4 {
     background-color: #008000; 
 }
 
-.section {
-    padding: 60px 0;
+.btn-secondary {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    margin-top: 10px;
 }
 
-.bg-light {
-    background-color: var(--color-background); 
+.btn-secondary:hover {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
 }
 
+.btn-large {
+    padding: 15px 35px; 
+    font-size: 1.1em;
+}
+
+/* 7. ELEMENTOS DE CONTEÚDO (H2, LISTAS, TABELAS) */
 .section h2 {
     display: table; 
     margin-left: auto;
@@ -141,28 +200,6 @@ table tbody tr:hover {
     background-color: #e6e6e6;
 }
 
-.medal-list {
-    list-style-type: none;
-    padding: 10px 0;
-    text-align: center;
-}
-
-.medal-list li {
-    background: var(--color-background);
-    color: var(--color-primary);
-    display: inline-block;
-    margin: 5px 10px;
-    padding: 8px 15px;
-    border: 2px solid var(--color-primary);
-    border-radius: 20px;
-    font-weight: bold;
-    font-size: 0.95em;
-}
-
-.text-center {
-    text-align: center;
-}
-
 .block-info {
     display: block;
     margin-top: 15px;
@@ -170,24 +207,47 @@ table tbody tr:hover {
     font-size: 0.85em;
 }
 
-.btn-secondary {
-    display: inline-block;
-    background-color: transparent;
+/* 8. GRIDS E CARDS */
+
+/* Regulamento/Inscrição Grid */
+.links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.link-item {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    padding: 30px 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+
+.link-item h3 {
+    font-size: 1.3em;
     color: var(--color-primary);
-    border: 2px solid var(--color-primary);
-    padding: 12px 30px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    margin-top: 10px;
+    margin-bottom: 15px;
 }
 
-.btn-secondary:hover {
-    background-color: var(--color-primary);
-    color: var(--color-text-light);
+.link-item p {
+    flex-grow: 1; 
+    margin-bottom: 20px;
 }
 
+.link-item.highlight {
+    background-color: #f2fff2; 
+    border-color: #008000;
+    border-width: 2px;
+}
+
+/* Organizadores Grid */
 .organizadores-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -237,82 +297,90 @@ table tbody tr:hover {
     text-decoration: underline;
 }
 
+/* 9. ESTILOS DE PREMIAÇÃO */
+.large-text {
+    font-size: 1.1em;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    line-height: 1.8;
+}
+
+.grid-premiacao {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    margin-top: 20px;
+    align-items: stretch; 
+}
+
+.card-premiacao {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid var(--color-primary);
+    display: flex;
+    flex-direction: column;
+}
+
+.card-premiacao h3 {
+    color: var(--color-secondary);
+    font-size: 1.5em;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.medal-tier-list {
+    list-style: none;
+    padding: 0;
+}
+
+.medal-tier-list li {
+    background: #e0f2e0; 
+    border-left: 5px solid #ffd700; 
+    padding: 15px;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    font-weight: 700;
+    color: var(--color-secondary);
+    border-radius: 4px;
+}
+
+.honra-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.honra-list li {
+    background: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 8px;
+    border: 1px dashed #ccc;
+    font-weight: 600;
+}
+
+.horarios-premiacao p {
+    background-color: #f2fff2;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-left: 3px solid var(--color-primary);
+    font-weight: 600;
+}
+
+.small-info {
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 15px;
+    display: block;
+}
+
+/* 10. RODAPÉ */
 footer {
     background-color: var(--color-primary);
     color: var(--color-text-light);
     text-align: center;
     padding: 15px 0;
     font-size: 0.9em;
-}
-
-nav {
-    margin-top: 15px;
-    padding-top: 10px;
-    border-top: 1px solid rgba(255, 255, 255, 0.3); 
-}
-
-nav a {
-    color: var(--color-text-light);
-    text-decoration: none;
-    padding: 8px 15px;
-    margin: 0 5px;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-    display: inline-block;
-    font-weight: 600;
-}
-
-nav a:hover {
-    background-color: rgba(0, 0, 0, 0.2);
-}
-
-nav a.active {
-    background-color: #008000; 
-    color: #FFF;
-}
-
-
-
-.links-grid {
-    display: grid;
-    /* Divide em 3 colunas iguais em telas grandes, 1 em telas pequenas */
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.link-item {
-    background-color: #ffffff;
-    border: 1px solid #e0e0e0;
-    padding: 30px 20px;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    height: 100%; /* Garante que todos os cards tenham a mesma altura */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Empurra o botão para baixo */
-}
-
-.link-item h3 {
-    font-size: 1.3em;
-    color: var(--color-primary);
-    margin-bottom: 15px;
-}
-
-.link-item p {
-    flex-grow: 1; /* Faz o parágrafo ocupar o espaço extra */
-    margin-bottom: 20px;
-}
-
-/* Destaque para o card de Inscrição */
-.link-item.highlight {
-    background-color: #f2fff2; 
-    border-color: #008000;
-    border-width: 2px;
-}
-
-.btn-large {
-    padding: 15px 35px; 
-    font-size: 1.1em;
 }

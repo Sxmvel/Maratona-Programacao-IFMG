@@ -1,16 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Premiações | Maratona IFMG Ouro Branco</title>
     <link rel="stylesheet" href="css/style.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
     <header class="main-header">
         <div class="container">
@@ -18,8 +14,8 @@
             <h2>IFMG Campus Ouro Branco</h2>
             <nav>
                 <a href="index.html">Início</a>
-                <a href="detalhes.html" class="active">📅 Data, Local e Níveis</a>
-                <a href="premiacoes.html">🏆 Premiações</a>
+                <a href="detalhes.html">📅 Data, Local e Níveis</a>
+                <a href="premiacoes.html" class="active">🏆 Premiações</a>
                 <a href="contato.html">💬 Contato</a>
             </nav>
         </div>
@@ -27,31 +23,50 @@
 
     <section id="premiacao" class="section bg-light">
         <div class="container">
-            <h2>🏆 Premiações e Reconhecimento</h2>
+            <h2 class="text-center">🏆 Premiações e Reconhecimento</h2>
 
-            <p>A Maratona valoriza o esforço e conhecimento. Serão premiadas as 3 melhores equipes de cada nível
-                (Iniciante, Técnico e Público Aberto). Todos os participantes receberão certificados de participação.
-            </p>
+            <p class="text-center large-text">A Maratona valoriza o esforço e conhecimento. Serão premiadas as 3 melhores equipes de cada nível (Iniciante, Técnico e Público Aberto). Todos os participantes receberão certificados de participação.</p>
 
-            <h3>Medalhas de Honra ao Mérito</h3>
-            <ul class="medal-list">
-                <li>Melhor Equipe Feminina</li>
-                <li>Melhor Equipe Externa</li>
-            </ul>
+            <div class="grid-premiacao">
+                
+                <div class="card-premiacao destaque-niveis">
+                    <h3>Pódio por Nível</h3>
+                    <p>Medalhas e prêmios serão entregues para as 3 primeiras equipes de cada categoria:</p>
+                    
+                    <ul class="medal-tier-list">
+                        <li>Nível Iniciante</li>
+                        <li>Nível Técnico</li>
+                        <li>Público Aberto</li>
+                    </ul>
 
-            <h3>Cerimônia de Premiação</h3>
-            <p>A entrega dos prêmios ocorrerá no mesmo dia da competição (28/11), com horários específicos por nível:
-            </p>
-            <ul>
-                <li><strong>Níveis Iniciante, Técnico e Aberto:</strong> 16:20 - 17:00</li>
-                <li><strong>Público Aberto:</strong> 22:10 - 22:30</li>
-            </ul>
+                    <p class="small-info">Serão consideradas apenas equipes que completarem no mínimo um problema na competição.</p>
+                </div>
+
+                <div class="card-premiacao destaque-honra">
+                    <h3>Medalhas de Honra ao Mérito</h3>
+                    <p>Reconhecimento especial para equipes que se destacam por sua composição ou origem:</p>
+                    
+                    <ul class="honra-list">
+                        <li>Melhor Equipe Feminina</li>
+                        <li>Melhor Equipe Externa</li>
+                    </ul>
+                    
+                    <h3>Cerimônia de Premiação</h3>
+                    <p>A entrega dos prêmios ocorrerá no mesmo dia da competição (28/11).</p>
+
+                    <div class="horarios-premiacao">
+                        <p><strong>16:20 - 17:00:</strong> Níveis Iniciante, Técnico e Aberto</p>
+                        <p><strong>22:10 - 22:30:</strong> Público Aberto</p>
+                    </div>
+                </div>
+
+            </div>
+            
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2025 Maratona de Programação IFMG Campus Ouro Branco. Realização: Equipe Organizadora.</p>
+        <p>&copy; 2025 Maratona de Programação IFMG Campus Ouro Branco.</p>
     </footer>
 </body>
-
 </html>
