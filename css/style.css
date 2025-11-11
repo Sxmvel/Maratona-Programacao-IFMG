@@ -48,73 +48,58 @@ h4 {
     background-color: var(--color-background);
 }
 
-/* 4. CABEÇALHO E NAVEGAÇÃO */
+
+/* 4. CABEÇALHO E NAVEGAÇÃO (REESTRUTURADO) */
+
 .main-header {
-    background-image: none;
-    background-color: var(--color-primary); 
-    color: var(--color-text-light);
-    padding: 20px 0; 
-    text-align: center;
-    position: relative;
-    
-    /* Configuração de Altura Padrão (para as páginas secundárias) */
-    min-height: 100px;
+    /* Define o header como flex container principal para o alinhamento de seus filhos */
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--color-primary); /* Cor de fallback/padrão */
 }
 
-.main-header h1, .main-header h2 {
-    /* Esconde os títulos HTML nas páginas com a imagem de fundo */
-    color: transparent; 
-    visibility: hidden; 
-    height: 0;
-    margin: 0;
-    padding: 0;
-}
-
-
-.main-header.home-bg {
-    background-image: url('../assets/header-bg.png');
-    background-size: cover; 
-    background-position: center top; /* Foca o centro superior da imagem */
-    background-color: var(--color-secondary);
-    
-    /* Altura MÍNIMA e FIXA para a imagem */
+/* 4.1. Área da Imagem (Aplicado APENAS no Index) */
+.header-image-area {
+    /* Altura Mínima para garantir a visibilidade da imagem */
     min-height: 250px; 
+    background-color: var(--color-secondary); /* Cor escura de base */
+    width: 100%;
     
-    /* Reposiciona o flexbox para empurrar o menu para o rodapé do cabeçalho */
-    justify-content: flex-end;
+    /* Regras do background da imagem */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
-.main-header.home-bg .container {
-    /* Força o conteúdo (NAV) a ocupar a largura total no Index */
+/* Aplica a imagem de fundo APENAS se o header tiver a classe 'home-bg' */
+.main-header.home-bg .header-image-area {
+    background-image: url('../assets/header-bg.png');
+    /* Altura reduzida para uniformidade em telas menores */
+    min-height: 150px; 
+}
+
+/* 4.2. Área da Navegação (Botões) - Aplicável a todas as páginas */
+.header-nav-area {
+    background-color: rgba(28, 28, 28, 0.9); /* Fundo escuro sutil para contraste com os botões */
+    padding: 15px 0;
     width: 100%;
 }
 
-nav {
-    margin-top: 0;
-    padding-top: 0;
-    border-top: none;
-    background-color: rgba(28, 28, 28, 0.5); /* Fundo semi-transparente para melhor contraste */
-    padding: 15px 0;
-    width: 100%; 
-    
-    /* Na HOME, flutua no rodapé da imagem. Nas secundárias, fica fixo */
-    position: relative; 
+.header-nav-area nav {
+    /* O container centraliza a navegação */
+    display: flex;
+    justify-content: center; /* Centraliza todos os botões horizontalmente */
+    align-items: center;
+    gap: 10px; /* Espaçamento entre os botões */
 }
 
-.main-header.home-bg nav {
-    position: absolute; /* OBRIGA o menu a flutuar na parte de baixo da imagem */
-    bottom: 0;
-    background-color: rgba(28, 28, 28, 0.75); /* Fundo mais escuro para garantir o contraste */
-}
-
+/* Estilos dos Links (Botões Simples) */
 nav a {
     color: var(--color-text-light);
     text-decoration: none;
     padding: 8px 15px;
-    margin: 0 5px;
     border-radius: 4px;
     transition: background-color 0.2s, color 0.2s;
     display: inline-block;
@@ -135,6 +120,7 @@ nav a.active {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
+/* Estilo do Botão CTA (Inscreva-se) */
 .cta-nav {
     background-color: #ffd700; 
     color: var(--color-secondary);
