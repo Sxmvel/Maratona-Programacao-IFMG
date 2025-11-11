@@ -49,53 +49,54 @@ h4 {
 }
 
 
-/* 4. CABEÇALHO E NAVEGAÇÃO (REESTRUTURADO) */
+/* 4. CABEÇALHO E NAVEGAÇÃO (FINAL) */
 
 .main-header {
-    /* Define o header como flex container principal para o alinhamento de seus filhos */
     display: flex;
     flex-direction: column;
     width: 100%;
     margin: 0 auto;
-    background-color: var(--color-primary); /* Cor de fallback/padrão */
+    background-color: var(--color-primary);
+    min-height: 100px;
 }
 
-/* 4.1. Área da Imagem (Aplicado APENAS no Index) */
-.header-image-area {
-    /* Altura Mínima para garantir a visibilidade da imagem */
-    min-height: 250px; 
-    background-color: var(--color-secondary); /* Cor escura de base */
+.main-header h1, .main-header h2 {
+    color: transparent; 
+    visibility: hidden; 
+    height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* ESTILO DA IMAGEM E CAIXA DE FUNDO */
+.main-header.home-bg .header-image-area {
+    min-height: 150px; 
     width: 100%;
+    background-color: var(--color-secondary);
     
-    /* Regras do background da imagem */
+    /* Configuração de Fundo da Imagem */
+    background-image: url('../assets/header-bg.png');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center top; 
 }
 
-/* Aplica a imagem de fundo APENAS se o header tiver a classe 'home-bg' */
-.main-header.home-bg .header-image-area {
-    background-image: url('../assets/header-bg.png');
-    /* Altura reduzida para uniformidade em telas menores */
-    min-height: 150px; 
-}
-
-/* 4.2. Área da Navegação (Botões) - Aplicável a todas as páginas */
+/* ÁREA DE NAVEGAÇÃO */
 .header-nav-area {
-    background-color: rgba(28, 28, 28, 0.9); /* Fundo escuro sutil para contraste com os botões */
+    background-color: rgba(28, 28, 28, 0.9); /* Fundo escuro sutil e uniforme */
     padding: 15px 0;
     width: 100%;
 }
 
 .header-nav-area nav {
-    /* O container centraliza a navegação */
+    /* Flexbox: Garante que os botões fiquem alinhados */
     display: flex;
-    justify-content: center; /* Centraliza todos os botões horizontalmente */
+    justify-content: center; 
     align-items: center;
-    gap: 10px; /* Espaçamento entre os botões */
+    gap: 10px; 
 }
 
-/* Estilos dos Links (Botões Simples) */
+/* ESTILO DOS BOTÕES (DESKTOP) */
 nav a {
     color: var(--color-text-light);
     text-decoration: none;
@@ -106,34 +107,54 @@ nav a {
     font-weight: 600;
     border: 1px solid rgba(255, 255, 255, 0.4);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-}
-
-nav a:hover {
-    background-color: rgba(255, 255, 255, 0.2); 
-    color: #ffd700; 
+    white-space: nowrap; /* Impede quebras de linha indesejadas */
 }
 
 nav a.active {
     background-color: rgba(255, 255, 255, 0.9); 
     color: var(--color-primary); 
     font-weight: 700;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-/* Estilo do Botão CTA (Inscreva-se) */
 .cta-nav {
     background-color: #ffd700; 
     color: var(--color-secondary);
     font-weight: 700 !important;
-    margin-left: 20px;
-    padding: 10px 20px;
+    margin-left: 15px; /* Espaço para separar do menu */
+    padding: 10px 18px;
     border: none !important;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
 }
 
-.cta-nav:hover {
-    background-color: #ffc400;
-    color: var(--color-secondary);
+@media (max-width: 768px) {
+    
+    /* Reduz a altura da imagem no celular */
+    .main-header.home-bg .header-image-area {
+        min-height: 120px; 
+        background-position: center 30%; /* Foca um pouco mais abaixo para ver o logo */
+    }
+
+    /* O menu se torna um container quebra-linha */
+    .header-nav-area nav {
+        flex-wrap: wrap; /* Permite que os botões quebrem a linha */
+        gap: 8px; /* Reduz o espaçamento entre eles */
+        padding: 0 10px; /* Padding horizontal no menu */
+    }
+
+    /* Reduz o tamanho dos botões */
+    nav a {
+        padding: 6px 10px; /* Botões mais compactos */
+        font-size: 0.85em; /* Fonte menor */
+        margin: 0; /* Remove margem lateral */
+    }
+
+    /* Reduz o botão CTA */
+    .cta-nav {
+        margin-left: 0;
+        padding: 8px 15px; 
+        width: 100%; /* Faz o CTA ocupar a largura total em uma nova linha */
+        order: 10; /* Empurra para o final da linha para organização */
+        margin-top: 5px;
+    }
 }
 
 
