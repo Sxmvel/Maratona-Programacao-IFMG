@@ -270,3 +270,49 @@ nav a.active {
     background-color: #008000; 
     color: #FFF;
 }
+
+
+
+.links-grid {
+    display: grid;
+    /* Divide em 3 colunas iguais em telas grandes, 1 em telas pequenas */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.link-item {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    padding: 30px 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    height: 100%; /* Garante que todos os cards tenham a mesma altura */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Empurra o botão para baixo */
+}
+
+.link-item h3 {
+    font-size: 1.3em;
+    color: var(--color-primary);
+    margin-bottom: 15px;
+}
+
+.link-item p {
+    flex-grow: 1; /* Faz o parágrafo ocupar o espaço extra */
+    margin-bottom: 20px;
+}
+
+/* Destaque para o card de Inscrição */
+.link-item.highlight {
+    background-color: #f2fff2; 
+    border-color: #008000;
+    border-width: 2px;
+}
+
+.btn-large {
+    padding: 15px 35px; 
+    font-size: 1.1em;
+}
