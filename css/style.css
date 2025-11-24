@@ -612,3 +612,44 @@ footer {
     line-height: 1.5;
     color: var(--color-secondary);
 }
+
+.patrocinadores-grid {
+    display: grid;
+    /* Divide em colunas de tamanho ajustável, para caber muitos logos */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.patrocinador-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 1px solid #eee;
+}
+
+.logo-patrocinador {
+    max-width: 100%;
+    max-height: 80px; /* Limita a altura do logo para uniformidade */
+    object-fit: contain;
+    margin-bottom: 15px;
+    filter: grayscale(10%); /* Suaviza a cor do logo levemente para integrar ao design */
+    transition: filter 0.3s;
+}
+
+.patrocinador-card:hover .logo-patrocinador {
+    filter: none; /* Cor original no hover para destaque */
+}
+
+.patrocinador-card h4 {
+    color: var(--color-secondary);
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+.patrocinador-card p {
+    font-size: 0.9em;
+    color: #666;
+}
