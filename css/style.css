@@ -615,7 +615,6 @@ footer {
 
 .patrocinadores-grid {
     display: grid;
-    /* Divide em colunas de tamanho ajustável, para caber muitos logos */
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 30px;
     margin-top: 40px;
@@ -623,7 +622,7 @@ footer {
 
 .patrocinador-card {
     background-color: #ffffff;
-    padding: 20px;
+    padding: 30px; /* Aumentado o padding interno */
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -632,15 +631,16 @@ footer {
 
 .logo-patrocinador {
     max-width: 100%;
-    max-height: 80px; /* Limita a altura do logo para uniformidade */
+    /* Aumentado de 80px para 120px para mais destaque */
+    max-height: 120px; 
     object-fit: contain;
     margin-bottom: 15px;
-    filter: grayscale(10%); /* Suaviza a cor do logo levemente para integrar ao design */
+    filter: grayscale(10%); 
     transition: filter 0.3s;
 }
 
 .patrocinador-card:hover .logo-patrocinador {
-    filter: none; /* Cor original no hover para destaque */
+    filter: none; 
 }
 
 .patrocinador-card h4 {
