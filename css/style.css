@@ -653,3 +653,56 @@ footer {
     font-size: 0.9em;
     color: #666;
 }
+
+/* --- ESTILOS PARA SEÇÃO PÓS-EVENTO --- */
+
+.foto-evento-destaque {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.estatisticas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.estatistica-card {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 5px solid var(--color-primary);
+    text-align: center;
+}
+
+.estatistica-card h4 {
+    font-size: 1.1em;
+    color: var(--color-secondary);
+    margin-bottom: 10px;
+}
+
+.numero-destaque {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.subtitulo-secao {
+    font-size: 1.8em;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    color: var(--color-secondary);
+}
+
+/* Destaque Pós-Evento (Para diferenciar os novos links de Recursos) */
+.link-item.highlight-pos {
+    background-color: #f2fff2;
+    border-color: var(--color-primary);
+    border-width: 2px;
+}
